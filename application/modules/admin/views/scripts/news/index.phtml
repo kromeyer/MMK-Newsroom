@@ -1,0 +1,13 @@
+<h2>News</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Überschrift</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo $this->partialLoop('news/index-row.phtml', $this->news); ?>
+    </tbody>
+</table>

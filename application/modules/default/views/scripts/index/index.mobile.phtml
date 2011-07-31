@@ -1,0 +1,63 @@
+<section id="news" class="start">
+    <h1>News</h1>
+	<a class="next browse right"><img src="/media/img/slider_both.png"></a>
+    <div class="scrollable">
+		<div  class="items">
+        <?php
+            foreach ($this->news as $news)
+            {
+                echo $this->partial(
+                    'partial/news.phtml',
+                    array (
+                        'item'  => $news
+                    )
+                );
+            }
+        ?>
+		</div>
+    </div>
+</section>
+
+<section id="event" class="start">
+    <h1>Events</h1>
+        <?php
+            foreach ($this->events as $event)
+            {
+                echo $this->partial(
+                    'partial/event.phtml',
+                    array (
+                        'item'  => $event
+                    )
+                );
+            }
+        ?>
+</section>
+
+<section id="press" class="start press">
+    <h1>Presse</h1>
+		    <?php
+		        foreach ($this->announcements as $announcement)
+		        {
+		            echo $this->partial(
+		                'partial/announcement.phtml',
+		                array (
+		                    'item'  => $announcement
+		                )
+		            );
+		        }
+		    ?>
+
+</section>
+
+<?php echo $this->partial('partial/flickr.phtml'); ?>
+
+<?php echo $this->partial('partial/contact.phtml'); ?>
+
+<section id="infos" class="start">
+	<h1>Infos</h1>
+	<?php echo $this->partial('partial/info.phtml'); ?>
+</section>
+
+<?php echo $this->partial('partial/addthis.phtml'); ?>
+<?php echo $this->partial('partial/blogs_networks.phtml'); ?>
+<?php echo $this->partial('partial/multimedia_bookmarks.phtml'); ?>

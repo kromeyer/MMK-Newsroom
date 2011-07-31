@@ -1,0 +1,9 @@
+
+RewriteRule ^thumb_(.*)_(.*)_(.*)x(.*)\.(jpg|jpeg|png|gif)$ thumb.php?id=$1&method=$2&width=$3&height=$4 [NC,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

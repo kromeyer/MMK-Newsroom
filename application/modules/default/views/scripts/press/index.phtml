@@ -1,0 +1,48 @@
+<h2>&nbsp;</h2>
+<p>Willkommen im Pressebereich des Studiengangs Medienmanagement und Kommunikation an der DHBW Mannheim.</p>
+<p>Bitte wenden Sie sich bei eventuellen Fragen an die Pressestelle der Dualen Hochschule. Frau Salzmann freut sich auf Ihre Nachricht unter <a href="mailto:presse@dhbw-mannheim.de">presse@dhbw-mannheim.de</a>.</p>
+
+<section id="announcements" class="press overview">
+    <?php
+        foreach ($this->announcements as $announcement)
+        {
+            echo $this->partial(
+                'partial/announcement.phtml',
+                array (
+                    'item'  => $announcement
+                )
+            );
+        }
+    ?>
+</section>
+
+<section id="materials" class="press overview">
+    <?php
+        foreach ($this->materials as $material)
+        {
+            echo $this->partial(
+                'partial/material.phtml',
+                array (
+                    'item'  => $material
+                )
+            );
+        }
+    ?>
+</section>
+
+<section id="mediaResponses" class="press">
+    <?php
+        foreach ($this->mediaResponses as $mediaResponse)
+        {
+            echo $this->partial(
+                'partial/media-response.phtml',
+                array (
+                    'item'  => $mediaResponse
+                )
+            );
+        }
+    ?>
+</section>
+
+
+<p>Eine breite Auswahl an Pressefotos finden Sie im Flickr-Account unter <br><a href="http://www.flickr.com/photos/medienmanagement/">http://www.flickr.com/photos/medienmanagement/</a></p>

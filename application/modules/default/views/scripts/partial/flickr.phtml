@@ -1,0 +1,36 @@
+<?php if ($this->flickr()) { ?>
+    <section class="flickr">
+        <h1>Flickr</h1>
+        <ul>
+            <?php
+                $result = $this->flickr()->peopleGetPublicPhotos(array(
+                    'per_page' => 4
+                ));
+
+                if ($result && $result->photos['total'] != 0)
+                {
+                    foreach ($result->photos->photo as $image)
+                    {
+                ?>
+                        <li>
+                            <a
+                                href="http://www.flickr.com/photos/<?php echo $image['owner']; ?>/<?php echo $image['id']; ?>"
+                            >
+                                <img
+                                    src="http://farm<?php echo $image['farm']; ?>.static.flickr.com/<?php echo $image['server']; ?>/<?php echo $image['id']; ?>_<?php echo $image['secret']; ?>_m.jpg"
+                                    alt="<?php echo $image['title']; ?>"
+                                />
+                            </a>
+                        </li>
+                <?php
+                    }
+                }
+            ?>
+        </ul>
+        <p class="minor small">
+            <a
+                href="http://www.flickr.com/photos/<?php echo $this->flickr()->peopleGetId(); ?>"
+            >mehr Fotos auf Flickr.com</a>
+        </p>
+    </section>
+<?php } ?>

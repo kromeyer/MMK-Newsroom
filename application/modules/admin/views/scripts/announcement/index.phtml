@@ -1,0 +1,13 @@
+<h2>Pressemitteilungen</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Titel</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo $this->partialLoop('announcement/index-row.phtml', $this->announcements); ?>
+    </tbody>
+</table>

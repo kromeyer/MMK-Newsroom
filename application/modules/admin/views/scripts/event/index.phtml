@@ -1,0 +1,15 @@
+<h2>Events</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Überschrift</th>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo $this->partialLoop('event/index-row.phtml', $this->events); ?>
+    </tbody>
+</table>

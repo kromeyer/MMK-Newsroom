@@ -1,0 +1,42 @@
+
+body {
+    font: 14px/1.4em arial, verdana, helvetica, lucida, sans-serif;
+	color: #2F3032;
+}
+
+h1, h2, h3, h4, h6, h6 {
+    font-family: arial, verdana, helvetica, lucida, sans-serif;
+    font-size: 1.3em;
+	color: rgb(0,26,122);
+	line-height: 1.3;
+}
+h2 {
+	margin-top: 0.6em;
+	margin-bottom: 0.2em;
+}
+
+a {
+    color: rgb(0,26,122);
+    text-decoration: none;
+	cursor: pointer;
+}
+a p {
+	color: #000;
+}
+
+.minor {
+	color: #999;
+}
+.small {
+	font-size: 0.9em;
+}
+footer p {
+text-transform: uppercase;
+font-family: Times, serif;
+}
+cite {
+	font-style: italic;
+}
+cite span.author {
+	font-style: normal;
+}

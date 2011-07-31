@@ -1,0 +1,14 @@
+<article
+    class="file <?php echo preg_replace('~[^A-Za-z0-9 ]~', '-', str_replace('/', ' ', $this->item->file->mimetype)); ?>"
+>
+    <a
+        href="/download/<?php echo $this->item->file->id; ?>"
+        title="<?php echo $this->escape($this->item->file->name); ?>"
+    >
+        <h2><?php echo $this->escape($this->item->title); ?></h2>
+        <p class="minor small">
+            <?php echo strftime('%e. %B %Y', $this->item->getUpdate('U')); ?> |
+            <?php echo $this->escape($this->item->file->name); ?>
+        </p>
+    </a>
+</article>

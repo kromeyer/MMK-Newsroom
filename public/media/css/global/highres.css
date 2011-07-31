@@ -1,0 +1,17 @@
+@media (min-width: 1280px) {
+     
+	div#wrapper {
+		width: 1240px;
+	}
+	aside#left {
+		display: block;
+	}
+	aside#right section.contact,
+	aside#right section.subscription {
+		display: none;
+	}
+	div#content section.social {
+		display: none;
+	}
+
+}

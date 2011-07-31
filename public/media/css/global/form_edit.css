@@ -1,0 +1,21 @@
+fieldset div.text {
+	width: 48%;
+	float:left;
+	clear:right;
+	margin-top: 0.75em;
+}
+fieldset div.text+div.text {
+	float:right;
+}
+
+textarea {
+	height: 2em;
+}
+textarea.used {
+	height: 8em;
+}
+
+form fieldset+fieldset {
+	margin-top: 0;
+	padding-top: 0;
+}

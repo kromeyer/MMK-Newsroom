@@ -1,0 +1,13 @@
+<section id="news" class="overview">
+    <?php
+        foreach ($this->news as $news)
+        {
+            echo $this->partial(
+                'partial/news.phtml',
+                array (
+                    'item'  => $news
+                )
+            );
+        }
+    ?>
+</section>

@@ -1,0 +1,24 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+    <meta charset="<?php echo $this->getEncoding(); ?>">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $this->getEncoding(); ?>"></meta> -->
+    
+    <?php echo $this->headTitle(); ?>
+
+    <?php echo $this->headLink()->appendStylesheet('/min/g=admin-css'); ?>
+    <script type="text/javascript" src="/min/g=admin-js"></script>
+</head>
+<body>
+    <?php
+        if (Zend_Auth::getInstance()->hasIdentity())
+        {
+            echo $this->partial('layout-page.phtml');
+        }
+        else
+        {
+            echo $this->partial('layout-box.phtml');
+        }
+    ?>
+</body>
+</html>

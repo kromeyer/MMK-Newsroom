@@ -1,0 +1,18 @@
+
+table {
+    width: 100%;
+}
+
+table tbody tr td ul {
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+}
+
+table tbody tr td ul li {
+    float: left;
+}
+
+table tbody tr td ul li+li {
+    margin-left: 1em;
+}

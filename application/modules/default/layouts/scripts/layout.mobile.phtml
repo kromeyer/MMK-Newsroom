@@ -1,0 +1,62 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+    <meta charset="<?php echo $this->getEncoding(); ?>">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $this->getEncoding(); ?>"></meta> -->
+    
+    <?php echo $this->headTitle(); ?>
+
+    <?php echo $this->headMeta() ?>
+    <meta name="author" content="Mirko Bitsch, Patrick Kromeyer, Anne Grubert, Simon Greiner">
+
+    <link rel="stylesheet" type="text/css" media="all" href="/min/g=mobile-css" />
+    <script type="text/javascript" src="/min/g=default-js"></script>
+</head>
+<body>
+	<div id="wrapper">
+	<nav>
+		<ul>
+			<li>
+				<a href="/">
+					<img id="logo" src="/media/img/logo.png">
+				</a>
+			</li>
+			<li>	
+            	<a href="/news" class="<?php echo strpos($_SERVER['REQUEST_URI'], '/news') === 0 ? 'active' : ''; ?>">
+                	News
+            	</a>
+			</li>
+			<li>
+            	<a href="/event" class="<?php echo strpos($_SERVER['REQUEST_URI'], '/event') === 0 ? 'active' : ''; ?>">
+                	Events
+            	</a>
+			</li>
+			<li>
+            	<a href="/press" class="<?php echo strpos($_SERVER['REQUEST_URI'], '/press') === 0 ? 'active' : ''; ?>">
+                	Presse
+            	</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<div id="content">
+    	<?php echo $this->layout()->content; ?>
+	</div>
+    
+    <footer>
+        <p>
+            <a href="/rss">RSS-Feed</a> |
+            <a href="/innovator">Die Erfinder</a>
+            <span class="right"><a href="/legal">Impressum</a></span>
+        </p>
+    </footer>
+    </div>
+
+    <?php
+        if (APPLICATION_ENV === 'production')
+        {
+            echo $this->partial('partial/google-analytics.phtml');
+        }
+    ?>
+</body>
+</html>

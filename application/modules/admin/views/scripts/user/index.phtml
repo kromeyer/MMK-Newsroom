@@ -1,0 +1,16 @@
+<h2>Nutzer</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Login</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Deaktiviert</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo $this->partialLoop('user/index-row.phtml', $this->users); ?>
+    </tbody>
+</table>

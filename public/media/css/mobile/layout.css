@@ -1,0 +1,278 @@
+nav {
+	background: white; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#ffffff'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#fff)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ddd,  #fff); /* for firefox 3.6+ */ 
+	display: block;
+	width: 100%;
+	margin-bottom: 2em;
+}
+nav ul {
+	margin: 0;
+}
+nav img#logo {
+	width: 100%;
+	margin-bottom: -15px;
+}
+nav ul li {
+	width: 24.2%;
+	display: inline-block;
+	text-align: center;
+	list-style: none;
+}
+nav ul li a {
+	display: inline-block;
+	width: 100%;
+	font-size: 100%;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 1px;
+	border-bottom: 7px solid #ccc;
+}
+nav ul li a.active {
+	border-bottom: 7px solid rgb(0,26,122);
+}
+
+
+
+
+/* 
+content and sections
+*/
+section {
+	margin-bottom: 4em;
+	min-height: 140px;
+}
+section+section {
+	margin: 2em 0;
+}
+section.start {
+	background-image: url("/media/img/sprites_description.png");
+	background-repeat: no-repeat;
+	padding-left: 40px;
+}
+section h1 {
+	display: none;
+}
+section#news {
+	background-image: none;
+}
+section#event {
+	background-position: -2800px 0;
+}
+section#press {
+	background-position: -1864px 0;
+}
+section#infos {
+	background-position: -933px 0;
+}
+section.contact {
+	background-position: -4000px 0;
+}
+section article img,
+div#content article img {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+div#content ul.comments {
+	margin: 0;
+	list-style: none;
+}
+div#content ul.comments li p {
+	margin: 0;
+}
+div#content ul.comments li {
+	margin-bottom: 1em;
+}
+
+
+/* 
+section news scrollable
+*/
+div#content section#news {
+	padding: 0px;
+	background-image: none;
+	margin-top: 1.1em;
+}
+div#content section#news a.browse{
+	height: 13em;
+	width: 25px;
+	float: left;
+	background-color: #ccc;
+	display: block;
+	margin-right: -26px;
+}
+div#content section#news article a>h2 {
+	margin-top: 0;
+}
+.scrollable {
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 100%;
+	height:13em;
+}
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accommodate scrollable items.
+	it's enough that you set width and height for the root element and
+	not for this element.
+*/
+.scrollable .items {
+	/* this cannot be too large */
+	width:1000%;
+	position:absolute;
+}
+/*
+	a single item. must be floated in horizontal scrolling.
+	typically, this element is the one that *you* will style
+	the most.
+*/
+.items article {
+	float:left;
+	width: 10%;
+	padding: 0 35px;
+	display: inline-block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+/* 
+flickr
+*/
+section.flickr {
+	padding:0;
+	background-image: none;
+}
+section.flickr ul {
+	margin: 0;
+	list-style: none;
+}
+section.flickr ul li {
+	width: 24%;
+	display: inline-block;
+}
+section.flickr ul li a,
+section.flickr ul li a img {
+	width: 100%;
+	display: inline-block;
+}
+section.flickr p {
+	float: right;
+	margin-right: 2%;
+}
+
+
+
+/* 
+contact
+*/
+section.contact {
+	padding-left: 40px;
+}
+section.contact .org,
+section.contact .email,
+section.contact .adr {
+	display: none;
+}
+section.contact img {
+	margin-right: 1em;
+}
+section.contact div.mail, 
+section.contact div.facebook, 
+section.contact div.xing,
+section.contact div.tel {
+	background-image: url("/media/img/sprites_button.png");
+	background-repeat: no-repeat;
+	height: 25px;
+	margin-left: 110px;
+	padding-left: 30px;
+}
+section.contact div.facebook {
+	background-position: 0 0;
+	margin-top: 0.5em;
+}
+section.contact div.mail {
+	background-position: 0 -270px;
+	margin-top: 0.5em;
+}
+section.contact div.xing {
+	background-position: 0 -90px;
+	margin-top: 0.5em;
+}
+section.contact div.tel {
+	background-position: 0 -300px;
+	margin-top: 0.5em;
+}
+
+
+/* 
+Social 
+*/
+section.social {
+	display: inline-block;
+	width: 40%;
+	margin-top: 4em;
+	background-image: url("/media/img/sprites_description.png");
+	background-repeat: no-repeat;
+	padding-left: 40px;
+}
+section.social h1{
+	display: inline-block;
+	margin-top: 0;
+}
+section.social ul {
+	margin: 0;
+	padding: 0;
+}
+section.multimedie_bookmarks {
+	background-image: none;
+	padding-left: 20px;
+}
+section.social ul li {
+	background-image: url("/media/img/sprites_button.png");
+	background-repeat: no-repeat;
+	padding-left: 2.2em;
+	list-style: none;
+	line-height: 25px;
+}
+section.social li+li {
+	margin-top: 0.5em;
+}
+
+/* 
+inventors 
+*/
+cite {
+	display: block;
+	max-width: 80%;
+	clear: right;
+	border-left: 0.2em solid #ccc;
+	padding-left: 0.4em;
+}
+cite:nth-child(2n) {
+	float: right;
+	border-right: 0.2em solid #ccc;
+	padding-right: 0.4em;
+	border-left: none;
+	padding-left: none;
+	text-align: right;
+}
+cite+h2 {
+	clear: both;
+}
+cite span.author {
+	display: block;
+}
+
+/* 
+Footer 
+*/
+footer {
+	border-top: 1px solid black;
+	padding-top: 1em;
+	text-align: center;
+	margin-top: 2em;
+}

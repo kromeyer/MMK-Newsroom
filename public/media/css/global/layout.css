@@ -1,0 +1,360 @@
+/* DEVELOPMENT START */
+
+
+/* DEVELOPMENT END */
+
+html {
+	background-color: #ccc;
+}
+
+div#wrapper {
+	width: 920px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFF;
+}
+header {
+	height: 170px;
+	background-image: url("/media/img/header.jpg");
+	margin: 1em -20px;
+	box-shadow: -5px 2px 20px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: -5px 2px 20px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: -5px 2px 20px rgba(0, 0, 0, 0.6);
+	background-position: 170px 0;
+}
+header img#logommk {
+	float: right;
+	clear: both;
+}
+nav {
+	text-align: center;
+	height: 1.5833em;
+	border-bottom: 0.5em solid #ccc;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	border-bottom: 0.5em solid white;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	height: 1.575em;
+}
+nav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+	padding-left: 1.6em;
+	padding-right: 1.6em;
+	padding-bottom: 0.4em;
+	border-bottom: 0.5em solid #ccc;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+nav li:hover,
+nav a.active li {
+	border-bottom: 0.5em solid rgb(0,26,122);
+}
+
+/*
+CONTENT
+*/
+div#content {
+	width: 580px;
+	margin: 0px 20px;
+	float: left;
+	margin-bottom: 1.2em;
+}
+/*
+START
+*/
+div#content section.start {
+	min-height: 150px;
+	background-image: url("/media/img/sprites_description.png");
+	background-repeat: no-repeat;
+	padding-left: 40px;
+}
+section#event {
+	background-position: -2800px 0;
+}
+section#press {
+	background-position: -1864px 0;
+}
+section#infos {
+	background-position: -933px 0;
+}
+div#content section+section {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+
+/*
+Content-Detailed
+*/
+div#content img,
+article.detail img {
+	float: left;
+	clear: both;
+	margin: 0 1em 1em 0;
+	border: 1px solid #ccc;
+}
+ul.comments {
+	margin: 0;
+}
+ul.comments li {
+	list-style: none;
+	margin: 0.5em 0;
+}
+ul.comments p.small {
+	margin: 0;
+	padding: 0;
+}
+div#content section h1 {
+	display: none;
+}
+section p.minor.small {
+	margin-bottom: 0.5em;
+}
+section article img {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+/*
+article {
+	clear: both;
+}
+*/
+
+/*
+section news scrollable
+*/
+div#content section#news {
+	padding: 0px;
+	background-image: none;
+	margin-top: 1.1em;
+}
+div#content section#news a.browse{
+	display: inline-block;
+	height: 12.2em;
+	overflow: hidden;
+	width: 25px;
+}
+div#content section#news a.left{
+	float: left;
+}
+div#content section#news a.right{
+	float: right;
+}
+div#content section#news article a>h2 {
+	margin-top: 0;
+}
+.scrollable {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 500px;
+	height:12.2em;
+	margin-left: 15px;
+	display: inline-block;
+}
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accommodate scrollable items.
+	it's enough that you set width and height for the root element and
+	not for this element.
+*/
+.scrollable .items {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+}
+/*
+	a single item. must be floated in horizontal scrolling.
+	typically, this element is the one that *you* will style
+	the most.
+*/
+.items article {
+	float:left;
+	width: 500px;
+}
+
+
+/*
+section flickr
+*/
+div#content section.flickr {
+	min-height: 100px;
+}
+section.flickr h1 {
+	display: none;
+}
+section.flickr ul {
+	margin: 0;
+}
+section.flickr ul li {
+	list-style: none;
+	display: inline-block;
+	width: 137px;
+	height: 91px; /*DEVELOPMENT*/
+	overflow: hidden; /*DEVELOPMENT*/
+}
+section.flickr ul li+li {
+	margin-left: 6px;
+}
+section.flickr img {
+	width: 137px;
+	border: 1px solid #ccc;
+}
+section.flickr p {
+	float:right;
+	clear: both;
+	overflow: hidden;
+}
+
+/*
+Press
+*/
+section.press {
+	margin-top: 2em;
+}
+section.press article {
+	background-image: url("/media/img/sprites_press_button.png");
+	background-repeat: no-repeat;
+	background-position: 495px -395px;
+	min-height: 45px;
+}
+section.press article:hover {
+	background-image: url("/media/img/sprites_press_button_hover.png");
+	background-repeat: no-repeat;
+	background-position: 495px -395px;
+}
+section.press article.pdf {
+	background-position: 495px 0;
+}
+section.press article.ms-office {
+	background-position: 495px -90px;
+}
+section.press article+article {
+	border-top: 1px dashed gray;
+}
+section.press.overview {
+	background-image: url("/media/img/sprites_press.png");
+	background-repeat: no-repeat;
+	min-height: 200px;
+	padding-left: 40px;
+}
+section#announcements.press.overview {
+	background-position: -1000px 0;
+}
+section#materials.press.overview {
+	background-position: 0 0;
+}
+section#mediaResponses {
+	display: none;
+}
+/*
+news and events
+*/
+section#events.overview article,
+section#news.overview article {
+	margin-bottom:2em;
+}
+
+
+/*
+inventors
+*/
+cite {
+	display: block;
+	max-width: 80%;
+	clear: right;
+	border-left: 0.2em solid #ccc;
+	padding-left: 0.4em;
+}
+cite:nth-child(2n) {
+	float: right;
+	border-right: 0.2em solid #ccc;
+	padding-right: 0.4em;
+	border-left: none;
+	padding-left: none;
+	text-align: right;
+}
+cite+h2 {
+	clear: both;
+}
+cite span.author {
+	display: block;
+}
+
+
+
+
+ul.comments {
+	margin-bottom: 1.25em;
+}
+
+hr#clear {
+	clear: both;
+	border: none;
+}
+
+footer {
+	height: 30px;
+	background-color: #ccc;
+}
+footer span.right {
+	float: right;
+	clear: both;
+}
+
+
+div.addthis_toolbox {
+	height: 20px !important;
+}
+div.addthis_toolbox > * {
+	display:inline-block !important;
+	float: right !important;
+	overflow: visible !important;
+}
+
+/*
+Social
+*/
+div#content section.social {
+	display: inline-block;
+	width: 240px;
+	margin-top: 2em;
+	background-image: url("/media/img/sprites_description.png");
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	clear: none;
+	float: left;
+}
+div#content section.social h1{
+	display: inline-block;
+	margin-top: 0;
+}
+div#content section.social ul {
+	margin: 0;
+	padding: 0;
+}
+div#content section.multimedie_bookmarks {
+	background-image: none;
+	padding-left: 20px;
+}
+div#content section.social ul li {
+	background-image: url("/media/img/sprites_button.png");
+	background-repeat: no-repeat;
+	padding-left: 2.2em;
+	list-style: none;
+	line-height: 25px;
+}
+div#content section.social li+li {
+	margin-top: 0.5em;
+}

@@ -1,0 +1,22 @@
+<?php
+    if ($this->youtube() && $videoFeed = $this->youtube()->getUserUploads($this->youtube()->getUsername()))
+    {
+        $session = new \Zend_Session_Namespace('youtube.phtml');
+
+        if (isset($session->counter) && $session->counter < $videoFeed->count() - 1)
+        {
+            $session->counter++;
+        }
+        else
+        {
+            $session->counter = 0;
+        }
+?>
+    <section class="youtube">
+        <h1>YouTube</h1>
+        <iframe
+            src="http://www.youtube.com/embed/<?php echo $videoFeed[$session->counter]->getVideoId(); ?>"
+        ></iframe>
+        <p><?php echo $this->escape($videoFeed[$session->counter]->getVideoTitle()); ?></p>
+    </section>
+<?php } ?>

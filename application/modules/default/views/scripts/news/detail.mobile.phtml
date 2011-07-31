@@ -1,0 +1,32 @@
+<article id="news" class="detail">
+
+<h2><?php echo $this->escape($this->news->headline); ?></h2>
+<p class="minor small">
+    <?php echo strftime('%e. %B %Y', $this->news->getUpdate('U')); ?> |
+    <?php echo $this->escape($this->news->user->title); ?>
+    <?php echo $this->escape($this->news->user->firstname); ?>
+    <?php echo $this->escape($this->news->user->lastname); ?>
+</p>
+
+<?php if ($this->news->image) { ?>
+    <img
+        alt="<?php echo $this->news->image->name; ?>"
+        src="/thumb_<?php echo $this->news->image->id; ?>_ffp_200x150.jpg"
+    />
+<?php } ?>
+
+<?php echo $this->markdown($this->escape($this->news->content)); ?>
+
+<p class="minor small">Tags: <?php echo $this->escape(implode(', ', $this->news->tags->toArray())); ?></p>
+
+<?php echo $this->partial('partial/addthis.phtml'); ?>
+
+<h2>Kommentare</h2>
+<ul class="comments">
+    <?php echo $this->partialLoop('partial/comment.phtml', $this->news->comments); ?>
+</ul>
+
+<h2>Schreiben Sie einen Kommentar</h2>
+<?php echo $this->form; ?>
+
+</article>

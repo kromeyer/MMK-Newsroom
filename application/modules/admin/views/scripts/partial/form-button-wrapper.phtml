@@ -1,0 +1,9 @@
+<div class="button <?php echo $this->element->getAttrib('class') ? $this->element->getAttrib('class') : ''; ?>">
+    <?php
+        echo $this->{$this->element->helper}(
+                $this->element->getName(),
+                $this->element->getValue(),
+                $this->element->getAttribs()
+        );
+    ?>
+</div>

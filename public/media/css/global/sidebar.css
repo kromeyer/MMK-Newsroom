@@ -1,0 +1,132 @@
+/* Dressed to kill - Sidebar */
+
+/* BOTH SIDES */
+aside {
+	width: 280px;
+	margin: 0;
+	margin-bottom: 1em;
+}
+section.subscription li.email {
+	display: none;
+}
+
+
+/* contact h-card */
+section.contact .org,
+section.contact .email,
+section.contact .adr {
+	display: none;
+}
+section.contact div.mail, 
+section.contact div.facebook, 
+section.contact div.xing,
+section.contact div.tel {
+	background-image: url("/media/img/sprites_button.png");
+	background-repeat: no-repeat;
+	height: 25px;
+	margin-left:100px;
+	padding-left: 30px;
+}
+section.contact div.facebook {
+	background-position: 0 0;
+	margin-top: 0.5em;
+}
+section.contact div.mail {
+	background-position: 0 -270px;
+	margin-top: 0.5em;
+}
+section.contact div.xing {
+	background-position: 0 -90px;
+	margin-top: 0.5em;
+}
+section.contact div.tel {
+	background-position: 0 -300px;
+	margin-top: 0.5em;
+}
+
+
+
+/* LEFT */
+aside#left {
+	float: left;
+	display: none;
+	margin-left:20px;
+}
+aside#left h1 {
+	line-height: 0.75;
+	margin-bottom: 0;
+}
+aside#left section+section {
+	margin-top: 2em;
+}
+aside#left .box {
+	margin: 0px 0px 0px -30px;
+	padding: 1em 0px 1em 30px;
+	border-top: 0.35em solid #ccc;
+	border-bottom: 0.25em solid #ccc;
+	background-color: white;
+	box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.4);
+}
+aside#left li {
+	background-image: url("/media/img/sprites_button.png");
+	background-repeat: no-repeat;
+	padding-left: 2.2em;
+	list-style: none;
+	line-height: 25px;
+	margin-top: 0.5em;
+}
+
+
+/* RIGHT */
+aside#right {
+	float: right;
+	margin-right: 20px;
+}
+aside#right > section {
+	border-bottom: 0.1em dashed gray;
+	border-top: 0.1em dashed gray;
+	margin-bottom: 0.4em;
+}
+aside#right > section:first-child {
+	border-top: none;
+}
+aside#right > section:last-child {
+	border-bottom: none;
+}
+/* RIGHT TWITTER */
+aside#right section.twitter ul {
+	margin: 1em 0px;
+}
+aside#right section.twitter ul li {
+	list-style: none;
+}
+aside#right section.twitter ul li+li {
+	border-top: 0.1em dashed gray;
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+}
+aside#right section.twitter ul li p {
+	margin: 0px;
+}
+/* youtube html5 player */
+aside iframe {
+    border: none;
+    width: 280px;
+}
+/* RIGHT ABO */
+aside#right section.subscription li {
+	background-image: url("/media/img/sprites_button.png");
+	background-repeat: no-repeat;
+	padding-left: 2.2em;
+	list-style: none;
+	line-height: 25px;
+	margin-top: 0.5em;
+}
+aside#right section.subscription li.feed {
+	background-position: 0 -240px;
+}
+aside#right section.subscription li.email {
+	background-position: 0 -270px;
+}

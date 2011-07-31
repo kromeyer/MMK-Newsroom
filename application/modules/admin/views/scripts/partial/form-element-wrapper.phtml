@@ -1,0 +1,81 @@
+<div class="element <?php echo $this->element->getAttrib('class') ? $this->element->getAttrib('class') : ''; ?>">
+    <?php
+        echo $this->formLabel(
+                $this->element->getName(),
+                $this->element->getLabel()
+        );
+
+        if ($this->element->helper == 'formFile' && $this->element->getOrginValue() !== null)
+        {
+            if (strpos($this->element->getOrginValue()->mimetype, 'image') === 0)
+            {
+            ?>
+                <img
+                    alt="<?php echo $this->element->getOrginValue()->name; ?>"
+                    src="/thumb_<?php echo $this->element->getOrginValue()->id; ?>_ffp_100x100.jpg"
+                />
+            <?php
+            }
+            else
+            {
+            ?>
+                <p><?php echo $this->element->getOrginValue()->name; ?></p>
+            <?php
+            }
+        }
+    ?>
+
+    <div class="element-wrapper">
+        <?php
+            switch ($this->element->helper)
+            {
+                case 'formRadio':
+                case 'formSelect':
+                    echo $this->formSelect(
+                        $this->element->getName(),
+                        $this->element->getValue(),
+                        $this->element->getAttribs(),
+                        $this->element->getMultiOptions()
+                    );
+                    break;
+                case 'formCheckbox':
+                    echo $this->formCheckbox(
+                        $this->element->getName(),
+                        $this->element->getValue(),
+                        $this->element->getAttribs(),
+                        array(
+                            'checkedValue' => $this->element->getCheckedValue(),
+                            'uncheckedValue' => $this->element->getUncheckedValue()
+                        )
+                    );
+                    break;
+                case 'formFile':
+                    echo $this->formFile(
+                        $this->element->getName(),
+                        $this->element->getAttribs()
+                    );
+                    break;
+                default:
+                    echo $this->{$this->element->helper}(
+                        $this->element->getName(),
+                        $this->element->getValue(),
+                        $this->element->getAttribs()
+                    );
+            }
+        ?>
+    </div>
+
+    <?php
+        if (count($this->element->getMessages()))
+        {
+            echo $this->formErrors(
+                $this->element->getMessages()
+            );
+        }
+
+        if ($this->element->getDescription())
+        {
+    ?>
+        <p><?php echo $this->element->getDescription(); ?></p>
+    <?php } ?>
+</div>

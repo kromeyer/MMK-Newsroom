@@ -1,0 +1,15 @@
+<h2><?php echo $this->escape($this->news->headline); ?></h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Anzeigename</th>
+            <th>E-Mail-Adresse</th>
+            <th>Kommentar</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo $this->partialLoop('news/comment-row.phtml', $this->news->comments); ?>
+    </tbody>
+</table>

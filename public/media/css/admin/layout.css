@@ -1,0 +1,90 @@
+
+/**
+ * Author       Patrick Kromeyer
+ * License      please view LICENSE file
+ */
+
+html {
+    background: #e3e3e3;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.layoutPage.head,
+.layoutPage.navigation,
+.layoutPage.message,
+.layoutPage.main {
+    background: #ffffff;
+    box-shadow: 0.1em 0.1em 0.5em #afafaf;
+    -moz-box-shadow: 0.1em 0.1em 0.5em #afafaf;
+    -webkit-box-shadow: 0.1em 0.1em 0.5em #afafaf;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.layoutPage.aside,
+.layoutPage.message,
+.layoutPage.main {
+    margin-top: 0;
+}
+
+.layoutPage.navigation {
+    margin-right: 0;
+}
+
+.navigation ul {}
+
+.navigation ul li.separator {
+    border-top: 0.1em solid #e3e3e3;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+.navigation ul ul {
+    margin-left: 1em;
+}
+
+.layoutPage.head {
+    overflow: hidden;
+}
+
+.layoutPage.head h1 {
+    float: left;
+}
+
+.layoutPage.head p {
+    float: right;
+}
+
+
+
+.layoutBox.wrapper {
+    margin: 15% auto 0;
+    width: 27.2727em;
+}
+
+.layoutBox.message,
+.layoutBox.main {
+    background: #ffffff;
+    box-shadow: 0.1em 0.1em 0.5em #afafaf;
+    -moz-box-shadow: 0.1em 0.1em 0.5em #afafaf;
+    -webkit-box-shadow: 0.1em 0.1em 0.5em #afafaf;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.layoutBox.message {
+    margin-bottom: 0;
+}
+
+
+
+.layoutPage.message.notice,
+.layoutBox.message.notice {
+    background: #d0e384;
+}
+
+.layoutPage.message.error,
+.layoutBox.message.error {
+    background: #f5cadc;
+}

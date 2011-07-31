@@ -1,0 +1,27 @@
+/* 	
+	Get me on Paper
+ 	Printing style
+*/
+
+@media print {
+
+
+	@page { 
+		size: 21.0cm 29.7cm; 
+		margin: 1cm 2cm 3cm 2cm;
+	}
+
+	body {
+		font:11pt/120% Times, serif;
+		background-color: white !important;
+		background-image: none !important;
+		color: black;
+	}
+
+	a:after {
+		content: " ("attr(href)")";
+		color: #ff0000;
+	}
+
+
+}

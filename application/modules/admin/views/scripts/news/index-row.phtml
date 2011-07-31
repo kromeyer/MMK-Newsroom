@@ -1,0 +1,23 @@
+<tr>
+    <td><?php echo $this->escape($this->object->headline); ?></td>
+    <td>
+        <ul>
+            <li>
+                <a
+                    href="/admin/news/comment/<?php echo $this->object->id; ?>"
+                >Kommentare</a>
+            </li>
+            <li>
+                <a
+                    href="/admin/news/edit/<?php echo $this->object->id; ?>"
+                >Bearbeiten</a>
+            </li>
+            <li>
+                <a
+                    class="confirm"
+                    href="/admin/news/delete/<?php echo $this->object->id; ?>"
+                >Löschen</a>
+            </li>
+        </ul>
+    </td>
+</tr>

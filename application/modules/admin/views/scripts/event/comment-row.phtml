@@ -1,0 +1,15 @@
+<tr>
+    <td><?php echo $this->escape($this->object->name); ?></td>
+    <td><?php echo $this->escape($this->object->email); ?></td>
+    <td><?php echo $this->escape($this->object->content); ?></td>
+    <td>
+        <ul>
+            <li>
+                <a
+                    class="confirm"
+                    href="/admin/event/comment-delete/<?php echo $this->object->id; ?>"
+                >Löschen</a>
+            </li>
+        </ul>
+    </td>
+</tr>

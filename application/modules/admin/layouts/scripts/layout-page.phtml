@@ -1,0 +1,47 @@
+<div class="layoutPage wrapper yui3-g">
+    <div class="yui3-u-1">
+        <div class="layoutPage head">
+            <h1>Newsroom</h1>
+            <p>
+                <a href="/logout">
+                    <?php echo $this->escape($this->currentUser()->firstname); ?>
+                    <?php echo $this->escape($this->currentUser()->lastname); ?> abmelden
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class=" yui3-u-1-5">
+        <div class="layoutPage aside navigation">
+            <?php echo $this->partial('layout-navigation.phtml'); ?>
+        </div>
+    </div>
+    <div class="yui3-u-4-5">
+        <?php $noticeSystemMessages = $this->systemMessages('notice'); ?>
+        <?php if ($noticeSystemMessages) { ?>
+            <div class="layoutPage message notice">
+                <h2>Hinweis</h2>
+                <ul>
+                    <?php foreach ($noticeSystemMessages as $message) { ?>
+                        <li><?php echo $message; ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        <?php } ?>
+        
+        <?php $errorSystemMessages = $this->systemMessages('error'); ?>
+        <?php if ($errorSystemMessages) { ?>
+            <div class="layoutPage message error">
+                <h2>Fehler</h2>
+                <ul>
+                    <?php foreach ($errorSystemMessages as $message) { ?>
+                        <li><?php echo $message; ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        <?php } ?>
+        
+        <div class="layoutPage main">
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </div>
+</div>

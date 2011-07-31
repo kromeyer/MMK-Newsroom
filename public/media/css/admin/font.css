@@ -1,0 +1,43 @@
+
+/**
+ * Author       Patrick Kromeyer
+ * License      please view LICENSE file
+ */
+
+body {
+    font: 11px/1.4545em Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h6, h6 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4545em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 1.8181em;
+    margin: 0;
+}
+
+a {
+    color: #6ca224;
+    text-decoration: none;
+}
+
+a:before {
+    content: "» ";
+}
+
+a:hover,
+a:active {
+    border-bottom: 0.1em solid #6ca224;
+    padding-bottom: 0.1em;
+}
+
+label a {
+    cursor: pointer;
+}
+
+label a:before {
+    content: "";
+}

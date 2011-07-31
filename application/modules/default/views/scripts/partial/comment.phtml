@@ -1,0 +1,7 @@
+<li>
+    <p class="minor small">
+        <?php echo $this->escape($this->object->name); ?>
+        am <?php echo strftime('%e. %B %Y', $this->object->getCreate('U')); ?>
+    </p>
+    <p><?php echo $this->escape($this->object->content); ?></p>
+</li>

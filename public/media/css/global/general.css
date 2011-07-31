@@ -1,0 +1,37 @@
+/* SPRITES */
+li.facebook {
+	background-position: 0 0;
+}
+li.twitter {
+	background-position: 0 -30px;
+}
+li.vz {
+	background-position: 0 -60px;
+}
+li.xing {
+	background-position: 0 -90px;
+}
+li.youtube {
+	background-position: 0 -120px;
+}
+li.flickr {
+	background-position: 0 -150px;
+}
+li.slideshare {
+	background-position: 0 -180px;
+}
+li.delicious {
+	background-position: 0 -210px;
+}
+li.feed {
+	background-position: 0 -240px;
+}
+li.email {
+	background-position: 0 -270px;
+}
+
+/* SPRITES LEFT */
+section.social li.facebook,
+aside#left li.facebook {
+	background-position: 0 0;
+}

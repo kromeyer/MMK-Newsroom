@@ -1,0 +1,18 @@
+<tr>
+    <td><?php echo $this->escape($this->object->title); ?></td>
+    <td>
+        <ul>
+            <li>
+                <a
+                    href="/admin/material/edit/<?php echo $this->object->id; ?>"
+                >Bearbeiten</a>
+            </li>
+            <li>
+                <a
+                    class="confirm"
+                    href="/admin/material/delete/<?php echo $this->object->id; ?>"
+                >Löschen</a>
+            </li>
+        </ul>
+    </td>
+</tr>

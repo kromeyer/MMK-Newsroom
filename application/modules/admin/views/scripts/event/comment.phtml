@@ -1,0 +1,15 @@
+<h2><?php echo $this->escape($this->event->headline); ?></h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Anzeigename</th>
+            <th>E-Mail-Adresse</th>
+            <th>Kommentar</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php echo $this->partialLoop('event/comment-row.phtml', $this->event->comments); ?>
+    </tbody>
+</table>

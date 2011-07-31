@@ -1,0 +1,97 @@
+
+/**
+ * Author       Patrick Kromeyer
+ * License      please view LICENSE file
+ */
+
+form {}
+
+form fieldset {}
+
+form fieldset+fieldset {
+    border-top: 0.1em solid #e3e3e3;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+form fieldset div {}
+
+form fieldset div.element+div.element {
+    margin-top: 0.75em;
+}
+
+form fieldset div.element.text input,
+form fieldset div.element.select select,
+form fieldset div.element.textarea textarea {
+    background: #e3e3e3;
+    border: none;
+    padding: 0.5em;
+    width: 100%;
+}
+
+form fieldset div.element.text label,
+form fieldset div.element.select label {
+    display: block;
+}
+
+form fieldset div.element.text div.element-wrapper,
+form fieldset div.element.textarea div.element-wrapper {
+    padding: 0 0.5em;
+}
+
+form fieldset div.element.text div.element-wrapper input,
+form fieldset div.element.textarea div.element-wrapper textarea {
+    margin: 0 -0.5em;
+}
+
+form fieldset div.element.checkbox {
+    position: relative;
+}
+
+form fieldset div.element.checkbox label {
+    left: 2em;
+    position: absolute;
+}
+
+form fieldset div.element.checkbox div.element-wrapper {
+    display: inline;
+}
+
+form fieldset div ul li {
+    color: #dba8bd;
+}
+
+form fieldset div p {
+    color: #9b9b9b;
+}
+
+form fieldset div.button {
+    float: right;
+}
+
+form fieldset div.button+div.button {
+    margin: 0 1em 0 0;
+}
+
+form fieldset div button {
+    background: #9b9b9b;
+    background: -moz-linear-gradient(0% 100% 90deg, #9b9b9b, #afafaf);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#afafaf), to(#9b9b9b));
+
+    border-color: #afafaf #afafaf #9b9b9b;
+    border-style: solid;
+    border-width: 0.1em;
+
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+}
+
+form fieldset div button:hover {
+    background: -moz-linear-gradient(0% 100% 90deg, #afafaf, #9b9b9b);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9b9b9b), to(#afafaf));
+
+    border-color: #9b9b9b #afafaf #afafaf;
+}

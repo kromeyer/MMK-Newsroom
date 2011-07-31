@@ -1,0 +1,21 @@
+<tr>
+    <td><?php echo $this->escape($this->object->login); ?></td>
+    <td><?php echo $this->escape($this->object->firstname); ?></td>
+    <td><?php echo $this->escape($this->object->lastname); ?></td>
+    <td><?php echo $this->object->disabled === true ? 'Ja' : 'Nein'; ?></td>
+    <td>
+        <ul>
+            <li>
+                <a
+                    href="/admin/user/edit/<?php echo $this->object->id; ?>"
+                >Bearbeiten</a>
+            </li>
+            <li>
+                <a
+                    class="confirm"
+                    href="/admin/user/delete/<?php echo $this->object->id; ?>"
+                >Löschen</a>
+            </li>
+        </ul>
+    </td>
+</tr>

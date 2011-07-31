@@ -1,0 +1,20 @@
+<article>
+    <a
+        href="/event/<?php echo $this->item->url; ?>"
+        title="<?php echo $this->escape($this->item->headline); ?>"
+    >
+        <h2><?php echo $this->escape($this->item->headline); ?></h2>
+        <p class="minor small">
+            <?php echo strftime('%e. %B %Y', $this->item->getUpdate('U')); ?> |
+            <?php echo count($this->item->comments); ?>
+            <?php echo count($this->item->comments) == 1 ? 'Kommentar' : 'Kommentare'; ?>
+        </p>
+        <?php if ($this->item->image) { ?>
+            <img
+                alt="<?php echo $this->item->image->name; ?>"
+                src="/thumb_<?php echo $this->item->image->id; ?>_ffp_120x90.jpg"
+            />
+        <?php } ?>
+        <?php echo $this->markdown($this->truncate($this->escape($this->item->content), 300)); ?>
+    </a>
+</article>

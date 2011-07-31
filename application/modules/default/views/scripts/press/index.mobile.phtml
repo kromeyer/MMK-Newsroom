@@ -1,0 +1,41 @@
+<section id="announcements" class="press overview">
+    <?php
+        foreach ($this->announcements as $announcement)
+        {
+            echo $this->partial(
+                'partial/announcement.phtml',
+                array (
+                    'item'  => $announcement
+                )
+            );
+        }
+    ?>
+</section>
+
+<section id="materials" class="press overview">
+    <?php
+        foreach ($this->materials as $material)
+        {
+            echo $this->partial(
+                'partial/material.phtml',
+                array (
+                    'item'  => $material
+                )
+            );
+        }
+    ?>
+</section>
+
+<section id="mediaResponses" class="press">
+    <?php
+        foreach ($this->mediaResponses as $mediaResponse)
+        {
+            echo $this->partial(
+                'partial/media-response.phtml',
+                array (
+                    'item'  => $mediaResponse
+                )
+            );
+        }
+    ?>
+</section>

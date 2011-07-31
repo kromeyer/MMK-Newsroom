@@ -1,0 +1,27 @@
+<?php if ($this->delicious()) { ?>
+    <section class="delicious">
+        <h1>Delicious</h1>
+        <ul>
+            <?php
+                $result = $this->delicious()->getRecentPosts($this->delicious()->getFilter(), 5);
+
+                if ($result !== null)
+                {
+                    foreach ($result as $post)
+                    {
+                    ?>
+                        <li>
+                            <a
+                                href="<?php echo $post->getUrl(); ?>"
+                            >
+                                <?php echo $this->escape($post->getTitle()); ?>
+                                <span><?php echo strftime('%e. %B %Y', $post->getDate()->get(\Zend_Date::TIMESTAMP)); ?></span>
+                            </a>
+                        </li>
+                    <?php
+                    }
+                }
+            ?>
+        </ul>
+    </section>
+<?php } ?>

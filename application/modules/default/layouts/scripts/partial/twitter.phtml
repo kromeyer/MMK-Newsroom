@@ -1,0 +1,34 @@
+<?php if ($this->twitter()) { ?>
+    <section class="twitter">
+        <h1>Twitter</h1>
+        <ul>
+            <?php
+                $userTimeline = $this->twitter()->statusUserTimeline(array(
+                    'count' => 3
+                ));
+
+                if (isset($userTimeline->status))
+                {
+                    foreach ($userTimeline->status as $tweet)
+                    {
+                ?>
+                        <li>
+                            <p class="small minor">
+                                <?php echo strftime('%e. %B %Y %H:%M', strtotime($tweet->created_at)); ?>
+                                via
+                                <?php echo $tweet->source; ?>
+                            </p>
+                            <p>
+                                <?php echo $this->twitter()->clickableLinks($this->escape($tweet->text)); ?>
+                                <a
+                                    href="http://www.twitter.com/<?php echo $tweet->user->screen_name; ?>" class="small"
+                                >[<?php echo $tweet->user->screen_name; ?>]</a>
+                            </p>
+                        </li>
+                <?php
+                    }
+                }
+            ?>
+        </ul>
+    </section>
+<?php } ?>
